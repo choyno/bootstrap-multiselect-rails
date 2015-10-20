@@ -548,7 +548,7 @@
 
             var $li = $(this.options.templates.li);
             $('label', $li).closest("li").addClass(class_name);
-            $('label', $li).closest("li").setAttribute('ref', ref)
+            $('label', $li).closest("li").attr('data-ref', ref)
             $('label', $li).addClass(inputType);
             
             if (this.options.checkboxName) {
