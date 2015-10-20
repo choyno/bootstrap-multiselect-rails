@@ -990,7 +990,7 @@
                     optionDOM += '</optgroup>';
                 }
                 else {
-                    optionDOM += '<option data-ref"'+ (option.ref ||"") +'" data-className="'+ (option.class_name || "" ) + '" value="' + option.value + '">' + (option.label || option.value) + '</option>';
+                    optionDOM += '<option data-ref="'+ (option.ref || "") +'" data-className="'+ (option.class_name || "" ) + '" value="' + option.value + '">' + (option.label || option.value) + '</option>';
                 }
             });
             
