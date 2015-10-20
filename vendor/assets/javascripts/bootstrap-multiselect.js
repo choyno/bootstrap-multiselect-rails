@@ -542,11 +542,13 @@
             // Support the label attribute on options.
             var label = this.options.label(element);
             var class_name = ($(element).data("classname") || "" );
+            var ref = ($(element).data("ref") || "" );
             var value = $(element).val();
             var inputType = this.options.multiple ? "checkbox" : "radio";
 
             var $li = $(this.options.templates.li);
             $('label', $li).closest("li").addClass(class_name);
+            $('label', $li).closest("li").setAttribute('ref', ref)
             $('label', $li).addClass(inputType);
             
             if (this.options.checkboxName) {
@@ -988,7 +990,7 @@
                     optionDOM += '</optgroup>';
                 }
                 else {
-                    optionDOM += '<option data-className="'+ (option.class_name || "" ) + '" value="' + option.value + '">' + (option.label || option.value) + '</option>';
+                    optionDOM += '<option data-ref"'+ (option.ref ||"") +'" data-className="'+ (option.class_name || "" ) + '" value="' + option.value + '">' + (option.label || option.value) + '</option>';
                 }
             });
             
